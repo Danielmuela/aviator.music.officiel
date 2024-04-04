@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviator Music - Accueil</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Ajout d'une police Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Ajout d'animations et effets visuels -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <h1 class="animate__animated animate__bounceInDown">Aviator Music</h1>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#equipe">Équipe</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil">
+            <h2 class="animate__animated animate__fadeInLeft">Bienvenue sur Aviator Music</h2>
+            <p class="animate__animated animate__fadeInRight">Découvrez une nouvelle dimension musicale avec nous.</p>
+            <button class="animate__animated animate__zoomIn"><a href="#services">Nos Services</a></button>
+        </section>
+
+        <section id="services">
+            <h2>Nos Services</h2>
+            <h3>Aviator Music Center</h3>
+            <ul>
+                <li>Formations musicales</li>
+                <li>Encadrement musical</li>
+                <li>Organisation de concours musicaux</li>
+            </ul>
+            <h3>Aviator Music Live Gospel</h3>
+            <ul>
+                <li>Séances musicales de live gospel</li>
+                <li>Participation de différents musiciens chrétiens</li>
+                <li>Célébration du nom de Jésus à travers la musique</li>
+            </ul>
+            <h3>Aviator Music Hors Dimension Musicale (HDM)</h3>
+            <ul>
+                <li>Organisation de visites dans des orphelinats</li>
+                <li>Opération de soutien aux démunis</li>
+                <li>Organisation d'émissions pour l'éveil de conscience des chrétiens</li>
+            </ul>
+        </section>
+
+        <section id="equipe">
+            <h2>Notre Équipe</h2>
+            <p>Rencontrez notre équipe dévouée qui travaille avec passion pour soutenir les artistes musicaux émergents.</p>
+            <!-- Ajoutez des informations sur les membres de l'équipe -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Pour toute demande d'information ou de collaboration, n'hésitez pas à nous contacter.</p>
+            <p>Email: <a href="mailto:aviatormusic001@gmail.com">aviatormusic001@gmail.com</a></p>
+            <!-- Ajoutez d'autres informations de contact -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aviator Music. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Ajout de scripts pour activer les animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
+    <script>
+        // Script pour activer les animations au défilement
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                $('.animate__animated').each(function(){
+                    var imagePos = $(this).offset().top;
+                    var imageHeight = $(this).height();
+                    var topOfWindow = $(window).scrollTop();
+
+                    if (imagePos < topOfWindow + imageHeight && imagePos + imageHeight > topOfWindow) {
+                        $(this).addClass('animate__fadeIn');
+                    } else {
+                        $(this).removeClass('animate__fadeIn');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
